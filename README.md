@@ -1,4 +1,3 @@
-# Ethereum_Blockchain_Transactions
 # EthereumDB (Python and SQL)
 
 Create the EthereumDB containing data residing on the Ethereum blockchain. 
