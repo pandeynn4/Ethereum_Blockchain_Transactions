@@ -1,0 +1,16 @@
+
+C:\Users\niraj_kumar_pandey\Downloads\EthereumDB-master\EthereumDB-master>python database.py
+Creating a new DB.
+100 new blocks completed.
+C:\Users\niraj_kumar_pandey\Downloads\EthereumDB-master\EthereumDB-master>python
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:57:15) [MSC v.1915 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sqlite3 as sq3
+>>> conn = sq3.connect("blockchain.db")
+>>> cur = conn.cursor()
+>>> cur.execute("SELECT * FROM Quick LIMIT 5")
+<sqlite3.Cursor object at 0x000001EFCB42E180>
+>>> a = cur.fetchall()
+>>> print(a)
+[('None', 'None', 2000000, '0x32Be343B94f860124dC4fEe278FDCBD38C102D88', 126917, '0x104994F45d9D697ca104e5704A7b77D7FeC3537c', '0xc55e2b90168af6972193c1f86fa4d7d7b31a29c156665d15b9cd48618b5177ef', '149990000000000000000'), ('None', 'None', 2000002, '0x147184Ef469cE9Bba3d08aF16F0b6d31CAC35ac8', 12, '0x695055f1EA55c36EC7E3Bd43D1736511ac8daB61', '0xe217b4f3b3566e39aaa98ac3c8119e943de114d44ff0043d0a79381d6795a7d8', '110000000000000000000'), ('None', 'None', 2000002, '0x32Be343B94f860124dC4fEe278FDCBD38C102D88', 126918, '0x06c69F734A0240Cb31678412F04EB0CE8F39258b', '0xbf33f86374e9c0c9f2713156ee2cdb647e9a813f1db75805331bf7948eeac6ec', '49990000000000000000'), ('None', 'None', 2000002, '0x6bd0F7D1c3b3eB168b9CA96BD7872A41e2D4EEc5', 1, '0xAA1A6e3e6EF20068f7F8d8C835d2D22fd5116444', '0x0a819ec79aa1ce1cb1d408f69c6ac6b4af187ac8cd7f094532e278d0848ddba3', '137000000000000000000'), ('None', 'None', 2000002, '0x4B8a25120682Dc5a5696D21C6D65f98442C7752F', 0, '0xb4bfEfC30A60B87380e377F8B96CC3b2E65A8F64', '0x4a7c96b7ca00fe596653a5cf568716e1819f19390b39a88e3d57eadbd68f7cd8', '62000000000000000')]
+>>> conn.close()
